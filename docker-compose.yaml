@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: codemotion/web-docker-example
+    build: .
+    ports:
+      - '3000:3000'
+    volues:
+      - './app:/app'
+  debian:
+    image: debian
+    command: sleep 1000000
